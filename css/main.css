@@ -20,6 +20,16 @@ h1 {
 #forms button{
 	margin:5px 15px;
 }
-#registerBtn {
+#info{
 	text-align: center;
+}
+#info form label,input{
+	display: block;
+}
+#info form input{
+	width: 50%;
+	margin:0 25%;
+}
+#registerBtn{
+	margin-top: 30px;
 }
