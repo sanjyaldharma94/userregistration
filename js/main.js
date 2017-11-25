@@ -28,8 +28,9 @@ function submitForm(){
 	var passwords = document.getElementById('password').value;
 
 	//Using for loop to 
-	for(i= 0; i < people.length; i++){
-		if(userInputs == people[i].username && passwords == people[i].password) {
+	for(var i= 0; i<people.length; i++){
+    console.log(i);
+		if(userInputs == people[i].username && passwords == people[i].password){
 			console.log(userInputs + " is logged in");
 			//;
            document.write("Welcome to our Website");
@@ -70,15 +71,15 @@ function submitForm(){
 };
 
 };
- newBtn.addEventListener('click', newBtnFunction,);
+// newBtn.addEventListener('click', newBtnFunction,);
  //function newBtnFunction() {
  	//document.getElementById('form2').style.display="block";
  	//console.log("lets get started");
  //};
 };
-function newBtnFunction(click){
-  document.write("Welcome!");
-};
+//function newBtnFunction(){
+  //document.write("Welcome!");
+//};
 
 
 
