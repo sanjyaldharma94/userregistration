@@ -8,53 +8,51 @@ var people = [
 	password: "Password1"
 },
 {
-	username: "Chris",
+	username: "chris",
 	password: "Password2"
 },
-{   username: "Nick",
+{   username: "nick",
 	password: "Password3"
 },
 {
-	username: "Courtney",
+	username: "courtney",
 	password: "Password4"
 },
-{   username: "Sam",
+{   username: "sam",
 	password: "Password5"
 }
 ];
 function submitForm(){
 	//when submit is clicked we want to save the user input
-	var userInputs = document.getElementById('username').value;
-	var passwords = document.getElementById('password').value;
-
-	//Using for loop to 
-	for(var i= 0; i<people.length; i++){
-    console.log(i);
-		if(userInputs == people[i].username && passwords == people[i].password){
-			console.log(userInputs + " is logged in");
-			//;
-           document.write("Welcome to our Website");
-          return; 
-		} else {
-			
-      document.body.removeChild(document.getElementById('forms'));
-			 var newDiv = document.createElement('div');
+	var userInput = document.getElementById('username').value;
+	var password = document.getElementById('password').value;
+    //Using for loop to loop through the object array
+  for(i = 0; i < people.length; i++){
+   console.log(people[i]);
+ 
+	   //giving a condition to match the username and password
+		if(userInput === people[i].username && password === people[i].password) {
+			console.log(userInput + " is logged in");
+           document.write("Welcome to our Website");     
+		}  
+    //remove the log in form and display the registration form
+    else {	
+ document.body.removeChild(document.getElementById('forms'));
+  var newDiv = document.createElement('div');
               var form = document.createElement('form');
-
            var label = document.createElement('label');
               label.textContent="NewUser: ";
-                    var input = document.createElement('input');
+             var input = document.createElement('input');
                           input.type="text";
                            input.id="newUser";
-
-              var label1 = document.createElement('label1');
+           var label1 = document.createElement('label1');
               label1.textContent="Password: ";
-                    var input1 = document.createElement('input');
+            var input1 = document.createElement('input');
                           input1.type="text";
                            input1.id="newPassword";
-
+          //creating a new register button
              var newBtn =  document.createElement('button');
-		          newBtn.className ="btn btn-large btn-default";
+		          newBtn.className ="btn btn-large btn-primary";
                 newBtn.textContent = "Register Now";
                      newBtn.id = "registerBtn";
                  label.appendChild(input);
@@ -64,22 +62,21 @@ function submitForm(){
                 newDiv.appendChild(form);
                 newDiv.appendChild(newBtn);
              document.getElementById('info').appendChild(newDiv);
+             //document.body.appendChild(newDiv);
       console.log("you are not in the system");
       alert("Register Below");
-      return;
+    
      // document.getElementById('forms').reset();
 };
-
 };
+
 // newBtn.addEventListener('click', newBtnFunction,);
  //function newBtnFunction() {
  	//document.getElementById('form2').style.display="block";
  	//console.log("lets get started");
- //};
-};
+ 
 //function newBtnFunction(){
   //document.write("Welcome!");
-//};
 
 
 
