@@ -32,13 +32,13 @@ var members = [
     //displaying the property and value of object array in console
    // console.log(members[i]);
     //lets use if/else statement to compare the userinput with the existing data
-    if(userName == members[i].username && userPassword == members[i].password){
+    if(userName==members[i].username && userPassword==members[i].password){
       console.log(userName);
       console.log(userPassword);
       //remove the form and display"Welcome to the website"
       document.write("Welcome to Our Website");
       //this return statement helps the for loop to stop when it finds a correct match
- return;
+ return
       //if the above conditions do not meet then the function will do this
     } else {
       //alert("Sorry You are not in the system");
@@ -49,7 +49,7 @@ var members = [
          newDiv.className = "registrationForm";
          //creating a form to append into the div
          var form = document.createElement('form');
-         //create 2 input fields
+         //create 2 label & input fields
          var label =document.createElement('label');
            label.textContent = "New Username :"
          var input = document.createElement('input');
@@ -72,12 +72,13 @@ var members = [
 //appending the form into new Div
             newDiv.appendChild(form);
             //appending the new div to the existing div in html
-            document.getElementById('info').appendChild(newDiv);          
-    }
+            document.getElementById('info').appendChild(newDiv);  
+             
+    };
   
-  }
+  };
 
- }
+ };
 
  /*document.getElementById("newBtn").addEventListener('click', newUser, false);
   
