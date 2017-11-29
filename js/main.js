@@ -37,10 +37,51 @@ var members = [
       console.log(userPassword);
       //remove the form and display"Welcome to the website"
       document.write("Welcome to Our Website");
-      //return statement stops the loop but i am not sure whats happening here;
-      return;
+      //this return statement helps the for loop to stop when it finds a correct match
+ return;
+      //if the above conditions do not meet then the function will do this
     } else {
+      //alert("Sorry You are not in the system");
+      //prompt("Do you wish to register?");
+      //create a new Div
          var newDiv = document.createElement('div');
+         //giving class name to the div so as to facilitate styling
+         newDiv.className = "registrationForm";
+         //creating a form to append into the div
+         var form = document.createElement('form');
+         //create 2 input fields
+         var label =document.createElement('label');
+           label.textContent = "New Username :"
+         var input = document.createElement('input');
+             input.className="form-control"
+          var label2 = document.createElement('label');
+             label2.textContent = "New Password :"
+          var input2 = document.createElement('input');
+            input2.className="form-control";
+          //creating a button
+          var registerBtn = document.createElement('button');
+            registerBtn.className= "btn btn-lg btn-primary";
+            registerBtn.textContent = "Register Now";
+            registerBtn.id="newBtn";
+            //now appending the items to the respective places
+            form.appendChild(label);
+            form.appendChild(input);
+            form.appendChild(label2);
+            form.appendChild(input2);
+            form.appendChild(registerBtn);
+//appending the form into new Div
+            newDiv.appendChild(form);
+            //appending the new div to the existing div in html
+            document.getElementById('info').appendChild(newDiv);          
     }
+  
   }
+
  }
+
+ /*document.getElementById("newBtn").addEventListener('click', newUser, false);
+  
+  function newUser(){
+    console.log("You are registered");
+    document.write("You are registered");
+  }*/
