@@ -1,3 +1,4 @@
+function submitForm(){
 //creating an object array
 var members = [
 {
@@ -22,7 +23,7 @@ var members = [
 }
 ];
  //calling a function to save the userinput and run a for loop with some conditions
- function submitForm(){
+ 
   //saving the userInput values on click of log in button
   var userName = document.getElementById('username').value;
   var userPassword = document.getElementById('password').value;
@@ -32,15 +33,15 @@ var members = [
     //displaying the property and value of object array in console
    // console.log(members[i]);
     //lets use if/else statement to compare the userinput with the existing data
-    if(userName==members[i].username && userPassword==members[i].password){
+    if(userName===members[i].username && userPassword===members[i].password){
       console.log(userName);
       console.log(userPassword);
       //remove the form and display"Welcome to the website"
       document.write("Welcome to Our Website");
       //this return statement helps the for loop to stop when it finds a correct match
- return
+       return
       //if the above conditions do not meet then the function will do this
-    } else {
+     } else {
       //alert("Sorry You are not in the system");
       //prompt("Do you wish to register?");
       //create a new Div
@@ -72,17 +73,14 @@ var members = [
 //appending the form into new Div
             newDiv.appendChild(form);
             //appending the new div to the existing div in html
-            document.getElementById('info').appendChild(newDiv);  
-             
+            document.getElementById('info').innerHTML = newDiv;  
+            
+    }        
     };
+  }
+ document.getElementById("btn").addEventListener('click', submitForm, false);
   
-  };
-
- };
-
- /*document.getElementById("newBtn").addEventListener('click', newUser, false);
-  
-  function newUser(){
+  /*function newUser(){
     console.log("You are registered");
     document.write("You are registered");
   }*/
